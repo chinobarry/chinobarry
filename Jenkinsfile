@@ -1,10 +1,43 @@
-- 👋 Hi, I’m @chinobarry
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+pipeline {
 
-<!---
-chinobarry/chinobarry is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+
+    agent any 
+
+
+    stages {
+
+        stages("build") {
+
+
+	  steps {
+	     echo 'buolding my application...'
+	  }
+
+	}
+
+        stages("test") {
+
+        
+	   steps {
+	      echo 'testing my application...'
+	  }
+	  
+	}
+
+        stages("deploy") {
+
+
+	  steps {
+	    
+              echo 'deploying my application...'
+
+          }
+
+        }  
+
+    }
+  
+}
+   
+
+	
